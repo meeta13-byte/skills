@@ -1,0 +1,207 @@
+%-------------------------
+% Resume in LaTeX (Two Page)
+% Template ships with PLACEHOLDERS — port real data from PROFILE.md before compiling.
+% Any leftover `%%FILL:` marker is a bug; grep for "%%FILL" before shipping.
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% Startup variant: vibrant builder-green accent
+\definecolor{accent}{HTML}{1F6B3A}
+\definecolor{linkcolor}{HTML}{000000}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=linkcolor,
+    linkcolor=linkcolor
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% Standard margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting with accent color
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\color{accent}
+}{}{0em}{}[\color{accent}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\color{accent}#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape \color{accent} %%FILL: FULL NAME%%} \\ \vspace{2pt}
+    \begingroup
+    \hypersetup{urlcolor=black}
+    \small %%FILL: PHONE%% $|$ \href{mailto:%%FILL: EMAIL%%}{%%FILL: EMAIL%%} $|$
+    \href{https://linkedin.com/in/%%FILL: LINKEDIN SLUG%%}{linkedin.com/in/%%FILL: LINKEDIN SLUG%%} $|$
+    \href{https://github.com/%%FILL: GITHUB USER%%}{github.com/%%FILL: GITHUB USER%%} $|$
+    \href{https://%%FILL: PORTFOLIO HOST%%}{%%FILL: PORTFOLIO HOST%%}
+    \endgroup
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small %%FILL: 3--4 sentences. Mirror the JD's keywords; only claims the user can defend.%%
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: %%FILL%%} \\
+     \textbf{Frontend \& Mobile}{: %%FILL%%} \\
+     \textbf{Backend \& APIs}{: %%FILL%%} \\
+     \textbf{AI \& Automation}{: %%FILL%%} \\
+     \textbf{Databases \& Auth}{: %%FILL%%} \\
+     \textbf{Cloud \& DevOps}{: %%FILL%%}
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+      \resumeSubheading
+      {%%FILL: ROLE%%}{%%FILL: LOCATION%%}
+      {%%FILL: EMPLOYER%%}{%%FILL: START -- END%%}
+      \resumeItemListStart
+        \resumeItem{%%FILL: bullet 1 -- verb-led, JD-relevant angle first%%}
+        \resumeItem{%%FILL: bullet 2%%}
+        \resumeItem{%%FILL: bullet 3%%}
+        \resumeItem{%%FILL: bullet 4 -- only bullets the user can defend in an interview%%}
+      \resumeItemListEnd
+
+      \vspace{12pt}
+      \resumeSubheading
+      {%%FILL: ROLE%%}{%%FILL: LOCATION%%}
+      {%%FILL: EMPLOYER%%}{%%FILL: START -- END%%}
+      \resumeItemListStart
+        \resumeItem{%%FILL: bullet 1%%}
+        \resumeItem{%%FILL: bullet 2%%}
+        \resumeItem{%%FILL: bullet 3%%}
+        \resumeItem{%%FILL: bullet 4 -- metric only if a real, attested number exists%%}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{\color{accent}%%FILL: PROJECT%%}: %%FILL: ONE-LINE DESCRIPTION%% $|$ \emph{%%FILL: STACK%%}}{}
+          \resumeItemListStart
+            \resumeItem{%%FILL: bullet 1 -- lead with the JD-relevant angle%%}
+            \resumeItem{%%FILL: bullet 2 -- surface scale/architecture first if the JD is backend%%}
+            \resumeItem{%%FILL: bullet 3%%}
+            \resumeItem{%%FILL: bullet 4 -- integrations, access control, or delivery story%%}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{\color{accent}%%FILL: PROJECT%%}: %%FILL: ONE-LINE DESCRIPTION%% $|$ \emph{%%FILL: STACK%%}}{}
+          \resumeItemListStart
+            \resumeItem{%%FILL: bullet 1%%}
+            \resumeItem{%%FILL: bullet 2%%}
+            \resumeItem{%%FILL: bullet 3 -- only bullets with a real backing artifact%%}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{\color{accent}%%FILL: PROJECT%%}: %%FILL: ONE-LINE DESCRIPTION%% $|$ \emph{%%FILL: STACK%%}}{}
+          \resumeItemListStart
+            \resumeItem{%%FILL: bullet 1 -- strongest infra / tooling signal%%}
+            \resumeItem{%%FILL: bullet 2%%}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{\color{accent}%%FILL: PROJECT%%}: %%FILL: ONE-LINE DESCRIPTION%% $|$ \emph{%%FILL: STACK%%}}{}
+          \resumeItemListStart
+            \resumeItem{%%FILL: bullet 1 -- keep it to one bullet unless the JD cares%%}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{\color{accent}%%FILL: PROJECT%%}: %%FILL: ONE-LINE DESCRIPTION%% $|$ \emph{%%FILL: STACK%%}}{}
+          \resumeItemListStart
+            \resumeItem{%%FILL: bullet 1 -- drop this project first if the page overflows%%}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {%%FILL: INSTITUTION%%}{%%FILL: LOCATION%%}
+      {%%FILL: DEGREE (%%FILL: CGPA%%)}{%%FILL: START -- END (expected)%%}
+  \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading{\textbf{Community \& Ecosystem}}{}
+      \resumeItemListStart
+        \resumeItem{%%FILL: ambassador / program, years, real audience numbers%%}
+        \resumeItem{%%FILL: workshops or talks led, with real attendance figures%%}
+        \resumeItem{%%FILL: platforms or sites you shipped, with a real outcome%%}
+      \resumeItemListEnd
+
+      \resumeProjectHeading{\textbf{Certifications}}{}
+      \resumeItemListStart
+        \resumeItem{%%FILL: only certifications actually held, with the issuing body%%}
+      \resumeItemListEnd
+
+      \resumeProjectHeading{\textbf{Technical Writing}}{}
+      \resumeItemListStart
+        \resumeItem{%%FILL: articles or a newsletter, with titles and where they are published. Delete this block if empty.%%}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\end{document}
