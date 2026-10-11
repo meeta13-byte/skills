@@ -12,11 +12,23 @@ Customize **the user's** resume to a specific job description. Pick the right ba
 
 ## Data source of truth
 
-Personal data lives in **`PROFILE.md`** (next to this `SKILL.md`, gitignored, never committed or pushed).
+Personal data lives in **`PROFILE.md`** (next to this `SKILL.md`, gitignored, never committed or pushed). Start from `PROFILE.template.md` — a blank form the user copies and fills in.
 
 - If `PROFILE.md` is missing or looks stale, **ask the user for their resume/CV or point at the file** before editing anything. Do not invent identity, contact details, employers, dates, or metrics.
 - `PROFILE.md` is authoritative. If a template and `PROFILE.md` disagree, `PROFILE.md` wins — re-port from it before compiling.
 - Never write personal data into the templates, the skill, or any committed file.
+
+### Honor the user's attestation labels
+
+`PROFILE.md` marks claims **`[attested]`** or **`[keyword-depth]`**. These are binding:
+
+- **`[attested]`** — may appear as an experience or project bullet, and on skills lines.
+- **`[keyword-depth]`** — may appear on **skills lines only**. Never write it as an
+  experience or project bullet, even when the JD asks for it directly. Instead, report the
+  gap to the user (see Report format item 4).
+- Anything **unlabelled** is ambiguous: treat it as keyword-depth until the user confirms.
+- **Always tell the user in the report** which keyword-depth skills you deliberately left off
+  the bullets, and why.
 
 ## Quick workflow
 
@@ -96,10 +108,14 @@ Real interviewers probe everything on the page; one fabricated keyword sinks the
 - **Timeline inflation.** Do not extend employment or graduation dates, and never convert "building projects since X" into "professional experience".
 
 **Known data conflicts — verify with the user before relying on them:**
+`PROFILE.md` has a **Truth filter notes** section with a "Conflicts to resolve with me" list.
+Anything listed there is unresolved: **ask the user in this run**, use their answer, and offer
+to write it back into `PROFILE.md` so the next run doesn't ask again. Typical entries:
 - Any start date that postdates the present, or "Present" on an engagement that has ended.
 - Role titles that differ between the resume, an older CV, and a portfolio.
-- Awards that appear only on a portfolio with no other corroboration.
-- Program/degree naming that differs between sources.
+- Awards or credentials that appear only on a portfolio with no other corroboration.
+- Degree or program naming that differs between sources.
+- Approved phrasing for sensitive claims (e.g. how to state years of experience).
 
 If the JD requires something the user doesn't have, **state that gap explicitly in your report**. Don't silently add the missing keyword.
 
@@ -174,8 +190,9 @@ After compiling, report:
 2. **Output path** (`tailored/...`).
 3. **What changed** — 4–6 bullets max.
 4. **What you did NOT add** because it would be fabrication — explicit list of JD requirements the user doesn't meet (CP ratings, published research, production K8s, years of experience, etc.).
-5. **Page count + compile status** (and overfull-box count).
-6. **Unverified items used** (awards, disputed dates, live links) — remind the user to verify before sending.
+5. **Which `[keyword-depth]` skills you kept on the skills line but refused to bullet**, with a one-line reason each.
+6. **Page count + compile status** (and overfull-box count).
+7. **Unverified items used** (awards, disputed dates, live links) and **conflicts you resolved** by asking — remind the user to verify before sending.
 
 ## When to ask before acting
 
@@ -183,6 +200,7 @@ After compiling, report:
 - JD requires more years of professional experience or a completed degree than the user has — flag it.
 - JD demands something not in the inventory (Go, Rust, ML training, production K8s) — flag the gap and ask whether to apply anyway.
 - `PROFILE.md` is missing or contradicts the resume on file — ask before editing.
+- A JD demands a `[keyword-depth]` skill the user doesn't have attested — flag it, ask whether to apply it as a skills-line-only mention, and never bullet it without an explicit instruction plus an attestation.
 - User pastes multiple JDs — ask which first, or do them sequentially.
 
 Otherwise — pick the base, port if needed, edit, compile, report.
